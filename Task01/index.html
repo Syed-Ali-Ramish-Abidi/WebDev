@@ -3,54 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parrot Art Gallery | Colorful Avian Artwork & Exhibitions</title>
-    <meta name="description" content="Discover stunning parrot artwork from global artists. Our gallery features colorful avian paintings, sculptures, and digital art celebrating the beauty of parrots worldwide.">
-    <meta name="keywords" content="parrot art, avian artwork, bird gallery, tropical bird paintings, parrot sculptures, wildlife art, exotic bird artwork">
-    <meta name="author" content="Parrot Art Gallery">
+    <meta name="description" content="Discover stunning mountain artwork from global artists. Premium collection of mountain paintings, sculptures, and digital art. Browse our exclusive gallery of majestic landscapes and nature-inspired creations.">
+    <meta name="keywords" content="mountain art, landscape paintings, art gallery, mountain artwork, sculpture, digital art, nature art, mountain paintings, art exhibitions">
+    <meta name="author" content="Mountain Art Gallery">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Parrot Art Gallery | Colorful Avian Artwork">
-    <meta property="og:description" content="Explore our collection of beautiful parrot-inspired artwork from talented artists worldwide.">
+    <meta name="theme-color" content="#2c5aa0">
+    <title>Mountain Art Gallery | Premium Landscape Paintings & Sculptures | Online Art Gallery</title>
+    <link rel="canonical" href="https://mountainartgallery.com/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Mountain Art Gallery | Premium Landscape Paintings & Sculptures">
+    <meta property="og:description" content="Explore an exclusive collection of stunning mountain artwork, paintings, and sculptures from talented artists worldwide.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mountainartgallery.com/">
+    <meta property="og:image" content="https://mountainartgallery.com/og-image.jpg">
+    <meta property="og:site_name" content="Mountain Art Gallery">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mountain Art Gallery | Majestic Landscapes & Artwork">
+    <meta name="twitter:description" content="Discover breathtaking mountain paintings, sculptures, and digital art.">
+    <meta name="twitter:image" content="https://mountainartgallery.com/og-image.jpg">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Mountain Art Gallery",
+        "description": "Premium online art gallery featuring mountain artwork, paintings, sculptures, and digital art",
+        "url": "https://mountainartgallery.com",
+        "image": "https://mountainartgallery.com/og-image.jpg",
+        "sameAs": [
+            "https://www.facebook.com/mountainartgallery",
+            "https://www.instagram.com/mountainartgallery",
+            "https://twitter.com/mountainartgallery"
+        ]
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Add your actual URL here -->
-    <!-- <meta property="og:url" content="https://www.parrotartgallery.com"> -->
-    <!-- Add your actual image URL here -->
-    <!-- <meta property="og:image" content="https://www.parrotartgallery.com/og-image.jpg"> -->
 </head>
-<body style="background-color: rgb(41, 204, 76);">
+<body>
 
-        <header class = "header">
-
-            <div class="Top bar" style="color: white;">
-                <h1>Parrot Art Gallery</h1>
-            </div>
-
-        </header>
-
-        <nav>
-            <ul class="nav-link">
-                <li><a href="index.html" style="color: white;">Home</a></li>
-                <li><a href="gallery.html" style="color: white;">Gallery</a></li>
-                <li><a href="artists.html" style="color: white;">Artists</a></li>
-                <li><a href="exhibitions.html" style="color: white;">Exhibitions</a></li>
-                <li><a href="contact.html" style="color: white;">Contact</a></li>
-            </ul>
-        </nav>
-        <div class = "body" style="color: white;">
-
-            <div class="main-content">
-                <h2>Welcome to the Parrot Art Gallery</h2>
-                <p>Discover stunning parrot artwork from global artists. Our gallery features colorful avian paintings, sculptures, and digital art celebrating the beauty of parrots worldwide.</p>
-
-                <div class="gallery">
-                    <img src="assets/parrot1.jpg" alt="Colorful Parrot Painting" style="width:100%;max-width:600px;">
-                    
-                    <img src="assets/parrot4.jpg" alt="Parrot Sculpture" style="width:100%;max-width:600px;">
-
-                    <img src="assets/parrot3.jpg" alt="Digital Parrot Artwork" style="width:100%;max-width:600px;">
-                </div>
-            </div>
+    <header class="site-header">
+        <div class="container">
+           <p class="logo">Mountain Art Gallery</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-btn">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="contact.html" >Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <h1>Welcome to the Mountain Art Gallery</h1>
+            <p>Explore an exceptional collection of breathtaking mountain artwork curated from talented global artists. Our gallery features stunning mountain paintings, bespoke sculptures, and cutting-edge digital art celebrating nature's most majestic peaks.</p>
+        </section>
+
+        <section class="nature-art-gallery" itemscope itemtype="https://schema.org/CollectionPage">
+            <h2>Featured Mountain Artwork</h2>
+            <div class="art-card" itemscope itemtype="https://schema.org/VisualArtwork">
+                <img src="nature1.jpg" alt="Majestic Mountain Painting - Original landscape artwork" itemprop="image">
+                <meta itemprop="name" content="Majestic Mountain Painting">
+                <meta itemprop="description" content="Stunning original mountain painting featuring alpine landscapes">
+                <div class="overlay"><span>View Painting</span></div>
+            </div>
+            <div class="art-card" itemscope itemtype="https://schema.org/VisualArtwork">
+                <img src="nature2.jpg" alt="Mountain Sculpture - Three-dimensional mountain art installation" itemprop="image">
+                <meta itemprop="name" content="Mountain Sculpture">
+                <meta itemprop="description" content="Contemporary mountain sculpture showcasing artistic interpretation of peaks">
+                <div class="overlay"><span>View Sculpture</span></div>
+            </div>
+            <div class="art-card" itemscope itemtype="https://schema.org/VisualArtwork">
+                <img src="nature3.jpg" alt="Digital Mountain Artwork - Modern digital art creation" itemprop="image">
+                <meta itemprop="name" content="Digital Mountain Artwork">
+                <meta itemprop="description" content="Contemporary digital art representing the beauty of mountain landscapes">
+                <div class="overlay"><span>View Digital Art</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Mountain Art Gallery. Curated Excellence.</p>
+    </footer>
 
 </body>
 </html>
