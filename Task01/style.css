@@ -102,7 +102,7 @@ body {
 .art-card {
     position: relative;
     overflow: hidden;
-    height: 400px;
+    height: 600px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
@@ -125,4 +125,453 @@ body {
     background: #f1f1f1;
     color: #888;
     font-size: 0.8rem;
+}
+
+/* Sign In Page Styling */
+.signin-main {
+    padding: 80px 20px;
+}
+
+.signin-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.signin-card {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.signin-card-header {
+    background: linear-gradient(135deg, #2d4a3e 0%, #1a2d25 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.signin-card-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+}
+
+.signin-card-body {
+    padding: 40px 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #2d4a3e;
+    box-shadow: 0 0 0 3px rgba(45, 74, 62, 0.1);
+}
+
+.form-check {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 0;
+    cursor: pointer;
+    accent-color: #2d4a3e;
+}
+
+.form-check-label {
+    cursor: pointer;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.signin-button-group {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #2d4a3e;
+}
+
+.btn-primary:hover {
+    background-color: #1a2d25;
+    transform: translateY(-2px);
+}
+
+.btn-lg {
+    padding: 14px 30px;
+    font-size: 1.1rem;
+}
+
+.signin-card-footer {
+    padding: 20px 30px;
+    background-color: #f9fbf9;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.signin-card-footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.signin-card-footer a {
+    color: #2d4a3e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-card-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Sign Up Page Styling */
+.signup-main {
+    padding: 80px 20px;
+}
+
+.signup-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.signup-card {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.signup-card-header {
+    background: linear-gradient(135deg, #2d4a3e 0%, #1a2d25 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.signup-card-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+}
+
+.signup-card-body {
+    padding: 40px 30px;
+}
+
+.signup-button-group {
+    margin-top: 30px;
+}
+
+.signup-card-footer {
+    padding: 20px 30px;
+    background-color: #f9fbf9;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.signup-card-footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.signup-card-footer a {
+    color: #2d4a3e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-card-footer a:hover {
+    text-decoration: underline;
+}
+
+/* About Page Styling */
+.about-main {
+    padding: 60px 20px 80px;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2d4a3e;
+    margin-bottom: 20px;
+}
+
+.about-lead {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section {
+    margin-bottom: 50px;
+}
+
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #2d4a3e;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4e4d9;
+}
+
+.about-section p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.about-section a {
+    color: #2d4a3e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.about-list li {
+    padding: 12px 0 12px 30px;
+    position: relative;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-list li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #2d4a3e;
+    font-size: 1.5rem;
+}
+
+.about-list strong {
+    color: #2d4a3e;
+}
+
+/* Feedback Page Styling */
+.feedback-main {
+    padding: 60px 20px 80px;
+}
+
+.feedback-hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.feedback-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2d4a3e;
+    margin-bottom: 20px;
+}
+
+.feedback-lead {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.feedback-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+}
+
+.feedback-form {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.feedback-form .form-group {
+    margin-bottom: 25px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-textarea {
+    resize: vertical;
+    font-family: 'Inter', sans-serif;
+}
+
+select.form-control {
+    cursor: pointer;
+}
+
+select.form-control option {
+    padding: 10px;
+}
+
+.feedback-note {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.feedback-button-group {
+    margin-top: 30px;
+}
+
+.feedback-button-group .btn {
+    width: 100%;
+}
+
+.feedback-info {
+    background: #f9fbf9;
+    padding: 30px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.feedback-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #2d4a3e;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.contact-item h4 {
+    color: #2d4a3e;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-item a {
+    color: #2d4a3e;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feedback-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .feedback-form {
+        padding: 25px;
+    }
+
+    .feedback-hero h1 {
+        font-size: 2rem;
+    }
+
+    .feedback-info {
+        height: auto;
+    }
 }
