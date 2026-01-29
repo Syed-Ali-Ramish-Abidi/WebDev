@@ -7,46 +7,231 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
 </head>
 <body>
 
     <header class="site-header">
         <div class="container">
-           <p class="logo">Mountain Art Gallery</p>
+            <p class="logo">Mountain Art Gallery</p>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="nav-btn">Gallery</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="signin.html">Sign In</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="#signin" class="nav-btn">Sign In</a></li>
+                    <li><a href="#signup">Sign Up</a></li>
+                    <li><a href="#home" >Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                   
                 </ul>
             </nav>
         </div>
     </header>
+    <section id="signin">
+        <div class="container signin-main">
+            <div class="signin-wrapper">
+                <div class="signin-card">
+                    <div class="signin-card-header">
+                        <h2>Sign In</h2>
+                    </div>
+                    <div class="signin-card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputEmail">Email address</label>
+                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword">Password</label>
+                                <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" />
+                                <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
+                            </div>
+                            <div class="signin-button-group">
+                                <a class="btn btn-primary btn-lg" href="#home">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signin-card-footer">
+                        <p>Need an account? <a href="#signup">Sign up!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <main class="container">
-        <section class="hero-section">
-            <h1>Welcome to the Mountain Art Gallery</h1>
-            <p>Explore an exceptional collection of breathtaking mountain artwork curated from talented global artists. Our gallery features stunning mountain paintings, bespoke sculptures, and cutting-edge digital art celebrating nature's most majestic peaks.</p>
-        </section>
+    <section id="signup">
+        <div class="container signup-main">
+            <div class="signup-wrapper">
+                <div class="signup-card">
+                    <div class="signup-card-header">
+                        <h2>Create Account</h2>
+                    </div>
+                    <div class="signup-card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputName">Full Name</label>
+                                <input class="form-control" id="inputName" type="text" placeholder="John Doe" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">Email address</label>
+                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword">Password</label>
+                                <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputConfirmPassword">Confirm Password</label>
+                                <input class="form-control" id="inputConfirmPassword" type="password" placeholder="Confirm Password" />
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="inputAgree" type="checkbox" />
+                                <label class="form-check-label" for="inputAgree">I agree to the Terms and Conditions</label>
+                            </div>
+                            <div class="signup-button-group">
+                                <a class="btn btn-primary btn-lg" href="#home">Sign Up</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-card-footer">
+                        <p>Already have an account? <a href="#signin">Sign in!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="home">
+        <main class="container">
+            <section class="hero-section">
+                <h1>Welcome to the Mountain Art Gallery</h1>
+                <p>Explore an exceptional collection of breathtaking mountain artwork curated from talented global artists. Our gallery features stunning mountain paintings, bespoke sculptures, and cutting-edge digital art celebrating nature's most majestic peaks.</p>
+            </section>
+    
+            <section class="nature-art-gallery">
+                <h2>Featured Mountain Artwork</h2>
+                <div class="art-card">
+                    <img src="nature1.jpg" alt="Majestic Mountain Painting">
+                    <div class="overlay"><span>View Painting</span></div>
+                </div>
+                <div class="art-card">
+                    <img src="nature2.jpg" alt="Mountain Sculpture">
+                    <div class="overlay"><span>View Sculpture</span></div>
+                </div>
+                <div class="art-card">
+                    <img src="nature3.jpg" alt="Digital Mountain Artwork">
+                    <div class="overlay"><span>View Digital Art</span></div>
+                </div>
+            </section>
+        </main>
+    </section>
 
-        <section class="nature-art-gallery">
-            <h2>Featured Mountain Artwork</h2>
-            <div class="art-card">
-                <img src="nature1.jpg" alt="Majestic Mountain Painting">
-                <div class="overlay"><span>View Painting</span></div>
+    <section id="about">
+        <div class="container about-main">
+            <section class="about-hero">
+                <h1>About Us</h1>
+                <p class="about-lead">Celebrating mountain art and creativity worldwide</p>
+            </section>
+    
+            <section class="about-content">
+                <div class="about-section">
+                    <h2>Our Mission</h2>
+                    <p>Mountain Art Gallery is dedicated to showcasing exceptional mountain artwork from talented artists worldwide. We provide a platform for artists to share their work and for art enthusiasts to discover inspiring pieces.</p>
+                </div>
+    
+                <div class="about-section">
+                    <h2>What We Do</h2>
+                    <p>We curate a diverse collection of mountain paintings, sculptures, and digital art. Our mission is to connect artists with collectors and make premium artwork accessible to everyone who appreciates the beauty of mountains and artistic expression.</p>
+                </div>
+    
+                <div class="about-section">
+                    <h2>Why Choose Us</h2>
+                    <p>With our carefully curated collections, fair pricing, and passionate team, we're committed to providing you with an exceptional gallery experience. Whether you're an artist or collector, we're here to help you discover your next masterpiece.</p>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="feedback">
+        <div class="container feedback-main">
+            <section class="feedback-hero">
+                <h1>Send Us Your Feedback</h1>
+                <p class="feedback-lead">We'd love to hear from you! Share your thoughts, suggestions, or any concerns about Mountain Art Gallery.</p>
+            </section>
+    
+            <div class="feedback-wrapper">
+                <form class="feedback-form">
+                    <div class="form-group">
+                        <label for="feedbackName">Full Name *</label>
+                        <input class="form-control" id="feedbackName" type="text" placeholder="Your Name" required />
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="feedbackEmail">Email Address *</label>
+                        <input class="form-control" id="feedbackEmail" type="email" placeholder="your@email.com" required />
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="feedbackSubject">Subject *</label>
+                        <select class="form-control" id="feedbackSubject" required>
+                            <option value="">Select a subject...</option>
+                            <option value="general">General Feedback</option>
+                            <option value="artwork">Artwork Quality</option>
+                            <option value="shipping">Shipping & Delivery</option>
+                            <option value="customer-service">Customer Service</option>
+                            <option value="website">Website Experience</option>
+                            <option value="artist-inquiry">Artist Inquiry</option>
+                            <option value="bug-report">Bug Report</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="feedbackMessage">Message *</label>
+                        <textarea class="form-control form-textarea" id="feedbackMessage" placeholder="Please share your feedback..." rows="6" required></textarea>
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" id="feedbackSubscribe" type="checkbox" />
+                        <label class="form-check-label" for="feedbackSubscribe">I'd like to receive updates and newsletters from Mountain Art Gallery</label>
+                    </div>
+    
+                    <div class="feedback-button-group">
+                        <button class="btn btn-primary btn-lg" type="submit">Submit Feedback</button>
+                    </div>
+    
+                    <p class="feedback-note">We read and appreciate all feedback. Our team will respond to your inquiry within 24-48 hours.</p>
+                </form>
+    
+                <div class="feedback-info">
+                    <h3>Other Ways to Reach Us</h3>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p><a href="mailto:contact@mountainartgallery.com">contact@mountainartgallery.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Address</h4>
+                        <p>Mountain Art Gallery<br>
+                        123 Gallery Street<br>
+                        Art District, CA 90210<br>
+                        United States</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p><a href="tel:+1-555-0123">+1 (555) 0123</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                        Saturday: 10:00 AM - 4:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
             </div>
-            <div class="art-card">
-                <img src="nature2.jpg" alt="Mountain Sculpture">
-                <div class="overlay"><span>View Sculpture</span></div>
-            </div>
-            <div class="art-card">
-                <img src="nature3.jpg" alt="Digital Mountain Artwork">
-                <div class="overlay"><span>View Digital Art</span></div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+   
 
     <footer class="site-footer">
         <p>&copy; 2026 Mountain Art Gallery. Curated Excellence.</p>

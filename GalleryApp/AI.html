@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Art Gallery | Modern Expression</title>
+    <link rel="stylesheet" href="style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">LUMINA</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#signin" class="btn-nav">Sign In</a></li>
+            <li><a href="#signup" class="btn-nav outline">Join</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Art is not what you see,<br>but what you make others see.</h1>
+            <p>Experience the finest collection of contemporary abstract art.</p>
+            <a href="#gallery" class="cta-button">View Collection</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <section id="about" class="section about-section">
+        <div class="container split-layout">
+            <div class="text-block">
+                <h2>The Curator's Vision</h2>
+                <p>Founded in 2012, Lumina has dedicated itself to the pursuit of the avant-garde. We believe that art acts as a mirror to society, reflecting our deepest complexities in strokes of color and light.</p>
+                <p>Our gallery hosts an exclusive selection of pieces from emerging digital artists and traditional masters alike.</p>
+            </div>
+            <div class="image-block">
+                <img src="https://images.unsplash.com/photo-1577720580479-7d839d829c73?q=80&w=1000&auto=format&fit=crop" alt="Interior of art gallery">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <h2 class="section-title">Current Exhibition</h2>
+            <div class="gallery-grid">
+                <div class="art-card">
+                    <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=800&auto=format&fit=crop" alt="Abstract Art 1">
+                    <div class="overlay">
+                        <h3>Ethereal Thoughts</h3>
+                        <p>Oil on Canvas</p>
+                    </div>
+                </div>
+                <div class="art-card wide">
+<img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop" alt="Abstract Art 2">
+                    <div class="overlay">
+                        <h3>Urban Decay</h3>
+                        <p>Digital Print</p>
+                    </div>
+                </div>
+                <div class="art-card">
+                    <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?q=80&w=800&auto=format&fit=crop" alt="Abstract Art 3">
+                    <div class="overlay">
+                        <h3>Golden Hour</h3>
+                        <p>Acrylic Pour</p>
+                    </div>
+                </div>
+                <div class="art-card tall">
+                    <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=800&auto=format&fit=crop" alt="Abstract Art 4">
+                    <div class="overlay">
+                        <h3>Blue Silence</h3>
+                        <p>Mixed Media</p>
+                    </div>
+                </div>
+                <div class="art-card">
+                    <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=800&auto=format&fit=crop" alt="Abstract Art 5">
+                    <div class="overlay">
+                        <h3>Chaos Theory</h3>
+                        <p>Sculpture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="auth-wrapper">
+        <section id="signin" class="section auth-section">
+            <div class="form-box">
+                <h2>Member Sign In</h2>
+                <form>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="collector@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Access Collection</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="signup" class="section auth-section alt-bg">
+            <div class="form-box">
+                <h2>Become a Patron</h2>
+                <form>
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="jane@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Set Password</label>
+                        <input type="password" placeholder="Create a strong password" required>
+                    </div>
+                    <button type="submit" class="btn-submit outline">Register Now</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <section id="feedback" class="section feedback-section">
+        <div class="container narrow">
+            <h2>Guest Feedback</h2>
+            <p>Your thoughts shape our future exhibitions.</p>
+            <form class="feedback-form">
+                <div class="row">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <select>
+                    <option>General Inquiry</option>
+                    <option>Purchase Request</option>
+                    <option>Exhibition Feedback</option>
+                </select>
+                <textarea rows="5" placeholder="Share your experience..."></textarea>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lumina Art Gallery. Designed with pure HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
