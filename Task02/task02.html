@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Animation Single File</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+
+    <div id="movingBox"></div>
+
+    <script>
+        const box = document.getElementById('movingBox');
+        
+        let position = 0;
+        let direction = 1; // 1 for down, -1 for up
+        const speed = 3;  
+        const limit = 150; 
+
+        function animate() {
+            position += speed * direction;
+            if (position >= limit || position <= -limit) {
+                direction *= -1;
+            }
+            box.style.transform = `translateY(${position}px)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+</body>
+</html>
