@@ -3,33 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Animation Single File</title>
+    <title>Aim & Shoot Game</title>
     <link rel="stylesheet" href="style.css">
-   
 </head>
 <body>
 
-
-    <div id="movingBox"></div>
+    <div id="gameArea">
+        <div id="scoreBoard">Score: 0</div>
+        
+        <div id="archer">🏹</div> 
+        
+        <div id="movingBox"></div>
+    </div>
 
     <script>
-        const box = document.getElementById('movingBox');
+        // --- GAME VARIABLES ---
+        const target = document.getElementById('movingBox');
+        const archer = document.getElementById('archer');
+        const gameArea = document.getElementById('gameArea');
+        const scoreBoard = document.getElementById('scoreBoard');
         
-        let position = 0;
-        let direction = 1; // 1 for down, -1 for up
-        const speed = 3;  
-        const limit = 150; 
+        let score = 0;
+        let currentAngle = 0; // Stores where the bow is pointing
 
-        function animate() {
-            position += speed * direction;
-            if (position >= limit || position <= -limit) {
+        // --- 1. TARGET ANIMATION (Up and Down) ---
+        let targetY = 0;
+        let direction = 1; 
+        const targetSpeed = 4; 
+        const limit = 250; 
+
+        function animateTarget() {
+            targetY += targetSpeed * direction;
+            if (targetY >= limit || targetY <= -limit) {
                 direction *= -1;
             }
-            box.style.transform = `translateY(${position}px)`;
-            requestAnimationFrame(animate);
+            target.style.transform = `translateY(${targetY}px)`;
+            requestAnimationFrame(animateTarget);
         }
-        animate();
-    </script>
+        animateTarget();
 
+        // --- 2. AIMING LOGIC (Math) ---
+        // This makes the bow look at the mouse
+        document.addEventListener('mousemove', function(event) {
+            // Get Archer Position
+            const archerRect = archer.getBoundingClientRect();
+            const archerX = archerRect.left + archerRect.width / 2;
+            const archerY = archerRect.top + archerRect.height / 2;
+
+            // Get Mouse Position
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            // Calculate Angle (Standard Math formula for angles)
+            // Math.atan2(y_diff, x_diff) gives angle in radians
+            const angle = Math.atan2(mouseY - archerY, mouseX - archerX);
+            currentAngle = angle; // Save this for shooting later
+
+            // Apply rotation to the bow element
+            archer.style.transform = `rotate(${angle}rad)`;
+        });
+
+        // --- 3. SHOOTING LOGIC ---
+        document.addEventListener('click', function(event) {
+            shootArrow();
+        });
+
+        function shootArrow() {
+            const arrow = document.createElement('div');
+            arrow.classList.add('arrow');
+            
+            // Start arrow at the archer's position
+            // We use fixed numbers here to keep it simple for beginners
+            // In a pro game, we would calculate exact center
+            const startX = 80; 
+            const startY = window.innerHeight / 2; 
+
+            // Set initial position
+            arrow.style.left = startX + 'px';
+            arrow.style.top = startY + 'px';
+            
+            // Rotate the arrow to match the bow
+            arrow.style.transform = `rotate(${currentAngle}rad)`;
+
+            gameArea.appendChild(arrow);
+
+            // Calculate Speed Direction
+            // Math.cos gives horizontal speed, Math.sin gives vertical speed
+            const speed = 15;
+            const velocityX = Math.cos(currentAngle) * speed;
+            const velocityY = Math.sin(currentAngle) * speed;
+
+            let arrowX = startX;
+            let arrowY = startY;
+
+            function moveArrow() {
+                // Move arrow based on calculation
+                arrowX += velocityX;
+                arrowY += velocityY;
+
+                arrow.style.left = arrowX + 'px';
+                arrow.style.top = arrowY + 'px';
+
+                // --- COLLISION CHECK ---
+                const arrowRect = arrow.getBoundingClientRect();
+                const targetRect = target.getBoundingClientRect();
+
+                if (
+                    arrowRect.right >= targetRect.left && 
+                    arrowRect.left <= targetRect.right && 
+                    arrowRect.top <= targetRect.bottom &&    
+                    arrowRect.bottom >= targetRect.top 
+                ) {
+                    // Hit!
+                    score++;
+                    scoreBoard.innerText = "Score: " + score;
+                    target.style.backgroundColor = "white"; // Flash effect
+                    setTimeout(() => target.style.backgroundColor = "#e74c3c", 100);
+                    
+                    arrow.remove(); 
+                    return; 
+                }
+
+                // Remove if off screen
+                if (arrowX > window.innerWidth || arrowY > window.innerHeight || arrowY < 0) {
+                    arrow.remove();
+                } else {
+                    requestAnimationFrame(moveArrow);
+                }
+            }
+            moveArrow();
+        }
+    </script>
 </body>
 </html>
