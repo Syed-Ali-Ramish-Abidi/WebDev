@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor - Roll No 0651</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar: Filters and Controls -->
+        <div class="sidebar">
+            <div class="filter-section">
+                <h3>Filters</h3>
+                <div class="filter-options">
+                    <button id="brightness" class="active">Brightness</button>
+                    <button id="saturation">Saturation</button>
+                    <button id="inversion">Inversion</button>
+                    <button id="grayscale">Grayscale</button>
+                    <button id="sepia">Sepia</button>
+                    <button id="blur">Blur</button>
+                </div>
+                
+                <div class="slider-info">
+                    <span class="name">Brightness</span>
+                    <span class="value">100%</span>
+                </div>
+                <!-- Step size 3 for odd roll number 0651 -->
+                <input type="range" min="0" max="200" value="100" step="3">
+            </div>
+
+            <div class="rotate-section">
+                <h3>Rotate & Flip</h3>
+                <div class="rotate-options">
+                    <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button id="horizontal"><i class="bx bx-reflect-vertical"></i>H</button>
+                    <button id="vertical"><i class="bx bx-reflect-horizontal"></i>V</button>
+                </div>
+                <!-- Rotate slider -->
+                 <div class="slider-info">
+                    <span class="name">Rotate</span>
+                    <span class="value">0 deg</span>
+                </div>
+                <input type="range" class="rotate-slider" min="-180" max="180" value="0" step="3">
+
+            </div>
+        </div>
+
+        <!-- Main Content: Canvas and History -->
+        <div class="main-content">
+             <!-- Control Buttons -->
+            <div class="top-controls">
+                <button class="undo-btn" disabled><i class="fa-solid fa-rotate-left"></i> Undo</button>
+                <button class="redo-btn" disabled><i class="fa-solid fa-rotate-right"></i> Redo</button>
+            </div>
+
+            <div class="preview-img">
+                <img src="place_holder.svg" alt="preview-img"> <!-- Placeholder until canvas is ready -->
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <!-- History Panel -->
+             <div class="history-panel">
+                <h3>History</h3>
+                <ul class="history-list">
+                    <!-- History items will be added here dynamically -->
+                    <li class="active">Original Image</li>
+                </ul>
+            </div>
+            
+            <div class="bottom-controls">
+                <input type="file" id="image-input" accept="image/*" hidden>
+                <button class="reset-filter">Reset Filters</button>
+                <button class="choose-img">Choose Image</button>
+                <button class="save-img">Save Image</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
